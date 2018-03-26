@@ -1,0 +1,46 @@
+abriu o terminal
+
+cd /var/www/
+mkdir html
+cd html/
+mkdir 502
+cd 502
+subl .
+----------------------------
+sudo subl /etc/php/7.0/apache2/php.ini
+Na linha 462
+display_errors = On
+sudo service apache2 restart
+----------------------------
+cd /var/www/html/502/
+git init
+git add .
+git commit -m "aula01"
+----------------------------
+No github
+Criar repositório
+----------------------------
+git remote add origin "url"
+git push origin master
+
+
+***********************************************
+
+/home/repositorio/FREQUENTES/Dev/developer_Us.ova
+
+habilitar os erros do php
+sudo subl /etc/php/7.0/apache2/php.ini
+
+Line 462
+display_errors = On
+
+sudo service apache2 restart
+
+git config --global user.name "nome"
+
+git config --global user.email email@hotmail.com
+
+mkdir /var/www/html
+mkdir /var/www/html/502
+cd /var/www/html/502/
+git init
