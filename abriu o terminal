@@ -44,3 +44,11 @@ mkdir /var/www/html
 mkdir /var/www/html/502
 cd /var/www/html/502/
 git init
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+entrar na pasta dos arquivos
+
+/var/www/html/502/aula01$ 
+
+phpunit TestesTest.php 
+phpunit --colors TestesTest.php
