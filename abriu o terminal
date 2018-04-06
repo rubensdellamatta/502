@@ -1,4 +1,4 @@
-abriu o terminal
+ criar pasta
 
 cd /var/www/
 mkdir html
@@ -7,11 +7,15 @@ mkdir 502
 cd 502
 subl .
 ----------------------------
+ativando erros
+
 sudo subl /etc/php/7.0/apache2/php.ini
 Na linha 462
 display_errors = On
 sudo service apache2 restart
 ----------------------------
+enviar projeto
+
 cd /var/www/html/502/
 git init
 git add .
@@ -25,25 +29,12 @@ git push origin master
 
 
 ***********************************************
-
-/home/repositorio/FREQUENTES/Dev/developer_Us.ova
-
-habilitar os erros do php
-sudo subl /etc/php/7.0/apache2/php.ini
-
-Line 462
-display_errors = On
-
-sudo service apache2 restart
+alterar dono projeto
 
 git config --global user.name "nome"
 
 git config --global user.email email@hotmail.com
 
-mkdir /var/www/html
-mkdir /var/www/html/502
-cd /var/www/html/502/
-git init
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 entrar na pasta dos arquivos
@@ -52,3 +43,143 @@ entrar na pasta dos arquivos
 
 phpunit TestesTest.php 
 phpunit --colors TestesTest.php
+
+
+888888888888888888888888888888
+
+
+-----------------------------------------------
+logar no banco usuario
+
+psql -h localhost -U aula06 
+
+-----------------------------------------------
+aula06=> 
+
+CREATE TABLE tb_alunos(
+	id SERIAL PRIMARY KEY,
+	nome VARCHAR(255),
+	email VARCHAR(255)
+);
+
+-----------------------------------------------
+
+INSERT INTO tb_alunos(nome,email) VALUES ('Chris Hemsworth','chris_hemsworth@nam.com');
+INSERT INTO tb_alunos(nome,email) VALUES ('Emma Thompson','emma.thompson@semper.com');
+INSERT INTO tb_alunos(nome,email) VALUES ('Jeremy Renner','jeremy.renner@eu.com');
+INSERT INTO tb_alunos(nome,email) VALUES ('Leighton Meester','leighton.meester@adipiscing.com');
+INSERT INTO tb_alunos(nome,email) VALUES ('Ariana Grande','arianagrande@egestas.com');
+INSERT INTO tb_alunos(nome,email) VALUES ('Jensen Ackles','jensenackles@venenatis.com');
+INSERT INTO tb_alunos(nome,email) VALUES ('Alice Eve','alice_eve@urna.com');
+
+
+
+
+
+
+
+
+\l 
+  Lista dos bancos de dados
+
+   Nome    |   Dono   | Codificação |   Collate   |    Ctype    | Privilégios de acesso 
+-----------+----------+-------------+-------------+-------------+-----------------------
+ aula06    | aula06   | UTF8        | pt_BR.UTF-8 | pt_BR.UTF-8 | 
+ 
+
+\dt 
+
+          Lista de relações
+ Esquema |   Nome    |  Tipo  |  Dono  
+---------+-----------+--------+--------
+ public  | tb_alunos | tabela | aula06
+
+
+ SELECT * FROM tb_alunos;
+
+ id |       nome       |              email              
+----+------------------+---------------------------------
+  1 | Chris Hemsworth  | chris_hemsworth@nam.com
+  2 | Emma Thompson    | emma.thompson@semper.com
+  3 | Jeremy Renner    | jeremy.renner@eu.com
+  4 | Leighton Meester | leighton.meester@adipiscing.com
+  5 | Ariana Grande    | arianagrande@egestas.com
+  6 | Jensen Ackles    | jensenackles@venenatis.com
+  7 | Alice Eve        | alice_eve@urna.com
+
+
+
+99999999999999999999999999999999999999999999999999999999999999999999999
+
+developer@developer:/var/www/html/502/aula06$ cd /var/www/html/502/aula06/exSimpleXml/
+
+
+developer@developer:/var/www/html/502/aula06$ ls -l //mostra permissão
+
+drwxrwxrwx 2 developer developer 4096 abr  3 19:32 exSimpleXml
+
+developer@developer:/var/www/html/502/aula06$ chmod 777 -R exSimpleXml/
+
+/html$ ls
+/html$ chmod 777 -R 502/
+
+
+//ge pegando
+//post mandar
+
+
+
+
+custom
+
+//criar json
+
+{
+  "nome": "nome",
+  "email": "email@.com"
+}
+
+//alterar
+
+{
+  "id": 11,
+  "nome": "oscar maia",
+  "email": "oscar@maia.com"
+}
+
+
+//deletar
+
+{
+    "id": 12
+ 
+}
+
+////////////////moz-extension://4250c349-d59f-4e66-8b3f-b1817e2ddc4c/dist/index.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+developer@developer:~$ cd /etc/apache2
+developer@developer:/etc/apache2$ ls
+apache2.conf    conf-enabled  magic           mods-enabled  sites-available
+conf-available  envvars       mods-available  ports.conf    sites-enabled
+developer@developer:/etc/apache2$ cd sites-available/
+developer@developer:/etc/apache2/sites-available$ ls
+000-default.conf  default-ssl.conf  lab2.conf  lab5.conf  projetofinal.conf
+502.conf          dexter.conf       lab3.conf  lab6.conf
+beavops.conf      lab1.conf         lab4.conf  lab7.conf
+developer@developer:/etc/apache2/sites-available$ sudo subl api.conf
+developer@developer:/etc/apache2/sites-available$ 
+
+
+allowoverride - nao deixar ler
