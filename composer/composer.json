@@ -1,0 +1,20 @@
+{
+    "name": "lucas/composer",
+    "description": "iciando com composer",
+    "authors": [
+        {
+            "name": "rubens della matta",
+            "email": "rubensdellamatta@gmail.com"
+
+        }
+    ],
+    "require": {
+        "silex/silex": "~2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lucas\\": "src/"
+        }
+    }
+
+}
